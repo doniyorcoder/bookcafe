@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Our Menu</h1>
+    {% for name, price in menu %}
+        <p><b>{{ name }}</b> - {{ price }}</p>
+    {% endfor %}
+    {% for image in images %}
+        <img src="{{ image }}" alt="Menu Item">
+    {% endfor %}
+    <button onclick="window.location.href='/'">🏠 Home</button>
+</body>
+</html>

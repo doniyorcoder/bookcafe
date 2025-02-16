@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>📚 Our Book Collection</h1>
+    <div class="book-container">
+        {% for book, image_url in books %}
+        <div class="book-item">
+            <img src="{{ image_url }}" alt="{{ book }}">
+            <p>{{ book }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

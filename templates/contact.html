@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Contact Us 📞</h1>
+    {% for key, value in contact.items() %}
+        <p><b>{{ key }}:</b> {{ value }}</p>
+    {% endfor %}
+    <button onclick="window.location.href='/'">🏠 Home</button>
+</body>
+</html>
